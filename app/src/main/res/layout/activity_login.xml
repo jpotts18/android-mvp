@@ -8,14 +8,13 @@
     tools:context=".LoginActivity">
 
     <EditText
-        android:id="@+id/login_email_edit_text"
+        android:id="@+id/login_github_username"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:hint="@string/email_hint"/>
+        android:hint="@string/github_username"/>
 
     <EditText
-        android:id="@+id/login_password_edit_text"
+        android:id="@+id/login_fake_password"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"

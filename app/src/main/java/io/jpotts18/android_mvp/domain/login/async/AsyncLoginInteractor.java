@@ -2,8 +2,6 @@ package io.jpotts18.android_mvp.domain.login.async;
 
 import android.os.Handler;
 
-import io.jpotts18.android_mvp.domain.login.OnLoginFinishedListener;
-
 /**
  * Created by jpotts18 on 5/11/15.
  */
@@ -20,7 +18,7 @@ public class AsyncLoginInteractor implements IAsyncLoginInteractor {
         // Mock login. I'm creating a handler to delay the answer a couple of seconds
         new Handler().postDelayed(new Runnable() {
             @Override public void run() {
-                if (username.contains("gmail")) {
+                if ((username.length() > 3) && (password.length() > 3)) {
                     listener.onSuccess();
                 } else {
                     listener.onError();

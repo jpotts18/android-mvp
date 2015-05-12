@@ -1,4 +1,4 @@
-package io.jpotts18.android_mvp.domain.login;
+package io.jpotts18.android_mvp.domain.login.async;
 
 /**
  * Created by jpotts18 on 5/11/15.

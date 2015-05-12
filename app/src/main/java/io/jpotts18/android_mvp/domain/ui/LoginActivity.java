@@ -1,12 +1,10 @@
 package io.jpotts18.android_mvp.domain.ui;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -28,11 +26,11 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     ********************************************************************************************
     */
 
-    @InjectView(R.id.login_email_edit_text)
-    EditText emailEditText;
+    @InjectView(R.id.login_github_username)
+    EditText githubUsernameEditText;
 
-    @InjectView(R.id.login_password_edit_text)
-    EditText passwordEditText;
+    @InjectView(R.id.login_fake_password)
+    EditText fakePasswordEditText;
 
     LoginPresenter presenter;
     ProgressDialog progressDialog;
@@ -44,19 +42,18 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
         ButterKnife.inject(this);
 
         if (BuildConfig.DEBUG) {
-            emailEditText.setText("anthing@gmail.com");
-            passwordEditText.setText("$uper$ecret");
+            githubUsernameEditText.setText("jakewharton");
+            fakePasswordEditText.setText("$uper$ecret");
         }
 
-        // #1 Give your Presenter a reference to the View here
         presenter = new LoginPresenter(this);
     }
 
     @OnClick(R.id.login_submit_button)
     public void loginTapped(View view){
         progressDialog = ProgressDialog.show(this, "Authenticating...", null);
-        String email =  emailEditText.getText().toString();
-        String password = passwordEditText.getText().toString();
+        String email =  githubUsernameEditText.getText().toString();
+        String password = fakePasswordEditText.getText().toString();
         // Pass user event straight to presenter
         presenter.attemptLogin(email, password);
     }
@@ -65,12 +62,16 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     public void navigateToListActivity() {
         progressDialog.dismiss();
         Toast.makeText(this, "Login Success!",Toast.LENGTH_SHORT).show();
+        // TODO: This seems to have to do with persisting data. Where should we move this?
+        Intent i = new Intent(this, RepoListActivity.class);
+        i.putExtra("username", githubUsernameEditText.getText().toString());
+        startActivity(i);
     }
 
     @Override
     public void loginFailed() {
         progressDialog.dismiss();
-        Toast.makeText(this, "Login Invalid: Use a gmail address", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Login Invalid: Must be 3 letters or longer", Toast.LENGTH_SHORT).show();
     }
 }
 
