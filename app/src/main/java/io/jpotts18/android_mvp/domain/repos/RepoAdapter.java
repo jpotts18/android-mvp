@@ -12,7 +12,6 @@ import java.util.List;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import io.jpotts18.android_mvp.domain.models.Repo;
-import io.jpotts18.android_mvp.domain.ui.RepoListActivity;
 
 /**
  * Created by jpotts18 on 5/12/15.

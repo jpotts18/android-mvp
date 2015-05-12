@@ -1,4 +1,4 @@
-package io.jpotts18.android_mvp.domain.ui;
+package io.jpotts18.android_mvp.domain.ui.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -63,7 +63,7 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
         progressDialog.dismiss();
         Toast.makeText(this, "Login Success!",Toast.LENGTH_SHORT).show();
         // TODO: This seems to have to do with persisting data. Where should we move this?
-        Intent i = new Intent(this, RepoListActivity.class);
+        Intent i = new Intent(this, RepoListFragmentActivity.class);
         i.putExtra("username", githubUsernameEditText.getText().toString());
         startActivity(i);
     }

@@ -1,9 +1,10 @@
 <resources>
-    <string name="title_repo_list_activity">Repo List</string>
+    <string name="title_repo_list_activity">Repo List Activity</string>
     <string name="app_name">Android MVP</string>
     <string name="action_settings">Settings</string>
     <string name="submit">Submit</string>
     <string name="password_hint">Password</string>
     <string name="email_hint">Email</string>
     <string name="github_username">Github Username</string>
+    <string name="title_activity_repo_list_fragment">Repo List Fragment</string>
 </resources>
