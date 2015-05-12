@@ -42,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/ui/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+              <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -52,28 +52,55 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/LoginPresenter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-              <folding />
+              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+              <folding>
+                <element signature="e#1248#1249#0" expanded="true" />
+                <element signature="e#1282#1283#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1372#1373#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SynchronousLoginInteractor.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/SynchronousLoginInteractor.java">
+      <file leaf-file-name="OnLoginFinishedListener.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/OnLoginFinishedListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26232114">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.21462639">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ILoginInteractor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginInteractor.java">
+      <file leaf-file-name="SynchronousLoginInteractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/sync/SynchronousLoginInteractor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="13" selection-end-column="7" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ISynchronousLoginInteractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/sync/ISynchronousLoginInteractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AsyncLoginInteractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/async/AsyncLoginInteractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="106" selection-start-line="14" selection-start-column="106" selection-end-line="14" selection-end-column="106" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,6 +110,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IAsyncLoginInteractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/async/IAsyncLoginInteractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -98,21 +135,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="1" selection-start-line="23" selection-start-column="1" selection-end-line="23" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ILoginView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+              <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -962,13 +989,20 @@
         <option value="$PROJECT_DIR$/app/proguard-rules.pro" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginInteractor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/LoginInteractor.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginView.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginPresenter.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/ui/LoginActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/SynchronousLoginInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/IAsyncInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginView.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/OnLoginFinishedListener.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/IAsyncLoginInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/AsyncLoginInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ISynchronousLoginInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/sync/ISynchronousLoginInteractor.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/async/AsyncLoginInteractor.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/LoginPresenter.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/ui/LoginActivity.java" />
       </list>
     </option>
   </component>
@@ -1369,32 +1403,42 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/ui/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="95" selection-start-line="22" selection-start-column="95" selection-end-line="22" selection-end-column="95" />
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginInteractor.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/sync/ISynchronousLoginInteractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginView.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/sync/SynchronousLoginInteractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="13" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/LoginPresenter.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/async/IAsyncLoginInteractor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <caret line="8" column="68" selection-start-line="8" selection-start-column="68" selection-end-line="8" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/async/AsyncLoginInteractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="106" selection-start-line="14" selection-start-column="106" selection-end-line="14" selection-end-column="106" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1406,10 +1450,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/SynchronousLoginInteractor.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/ILoginView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26232114">
-          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="23" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/LoginPresenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+          <folding>
+            <element signature="e#1248#1249#0" expanded="true" />
+            <element signature="e#1282#1283#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1372#1373#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/io/jpotts18/android_mvp/domain/login/OnLoginFinishedListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21462639">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>

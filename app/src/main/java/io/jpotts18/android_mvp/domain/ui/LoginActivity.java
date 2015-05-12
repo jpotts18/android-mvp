@@ -1,5 +1,6 @@
 package io.jpotts18.android_mvp.domain.ui;
 
+import android.app.ProgressDialog;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,8 +22,9 @@ import io.jpotts18.android_mvp.domain.login.LoginPresenter;
 public class LoginActivity extends ActionBarActivity implements ILoginView {
 
     /******************************************************************************************
-    - LoginActivity ONLY knows how to display views and sending events and data to the presenter
-    - LoginActivity doesn't know anything about the model (SynchronousLoginInteractor)
+     - LoginActivity ONLY knows how to display views and sending events and data to the presenter
+     - LoginActivity doesn't know anything about the model (SynchronousLoginInteractor)
+     - The only changes to the LoginActivity to allow for asynchronous behavior was to add a ProgressDialog
     ********************************************************************************************
     */
 
@@ -33,6 +35,7 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     EditText passwordEditText;
 
     LoginPresenter presenter;
+    ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,7 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
 
     @OnClick(R.id.login_submit_button)
     public void loginTapped(View view){
+        progressDialog = ProgressDialog.show(this, "Authenticating...", null);
         String email =  emailEditText.getText().toString();
         String password = passwordEditText.getText().toString();
         // Pass user event straight to presenter
@@ -59,11 +63,13 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
 
     @Override
     public void navigateToListActivity() {
+        progressDialog.dismiss();
         Toast.makeText(this, "Login Success!",Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void loginFailed() {
+        progressDialog.dismiss();
         Toast.makeText(this, "Login Invalid: Use a gmail address", Toast.LENGTH_SHORT).show();
     }
 }
