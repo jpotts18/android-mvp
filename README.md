@@ -22,8 +22,9 @@ This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/
 
 ## Getting Started
 
-1. ``git clone git@github.com:jpotts18/android-mvp.git``
-2. ** Read about the branches**
+1. Clone the Repo - ``git clone git@github.com:jpotts18/android-mvp.git``
+1. Look at all of the branches - ``git branch -a``
+2. **Read about the branches**
 
 This repository contains a **chain of branches** that shows the logical progression of the Android MVP. 
 
@@ -34,8 +35,7 @@ This repository contains a **chain of branches** that shows the logical progress
 * ``git checkout 5-list-fragment`` - substitutes the RepoListActivity for a Fragment without changing any code in the Model. 
 * The ``master`` branch contains the completed project. 
 
-
-# Key differences between MVC and MVP
+## Key differences between MVC and MVP
  
 MVP Pattern
 * View is more loosely coupled to the model. The presenter is responsible for binding the model to the view.
@@ -46,4 +46,9 @@ MVC Pattern
 * Controller are based on behaviors and can be shared across views
 * Can be responsible for determining which view to display (Front Controller Pattern)
 
-Source - [MVC or MVP Pattern – Whats the difference?](http://www.infragistics.com/community/blogs/todd_snyder/archive/2007/10/17/mvc-or-mvp-pattern-whats-the-difference.aspx)
+#### References
+[MVC or MVP Pattern – Whats the difference?](http://www.infragistics.com/community/blogs/todd_snyder/archive/2007/10/17/mvc-or-mvp-pattern-whats-the-difference.aspx)
+
+[Model-View-Presenter - Wikipedia](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
+
+[Separation of Concerns - Wikipedia](http://en.wikipedia.org/wiki/Separation_of_concerns)
