@@ -2,13 +2,9 @@
 
 This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) architecture and was inspired by [Antonio Leiva's Android MVP](https://github.com/antoniolg/androidmvp)
 
-## What is MVP?
+## Videos
 
-[Model-View-Presenter](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) is a user interface architectural pattern engineered to facilitate automated unit testing and improve the separation of concerns in presentation logic:
-
-* The **Model** is an interface defining the data to be displayed or otherwise acted upon in the user interface.
-* The **View** is a passive interface that displays data (the Model) and routes user commands (events) to the presenter to act upon that data.
-* The **Presenter** acts upon the model and the view. It retrieves data from repositories (the model), and formats it for display in the view.
+[Intro to MVP and Synchronous Login](https://github.com/jpotts18/android-mvp/blob/master/README.md)
 
 ## Getting Started
 
@@ -25,7 +21,16 @@ This repository contains a **chain of branches** that shows the logical progress
 * ``git checkout 5-list-fragment`` - substitutes the RepoListActivity for a Fragment without changing any code in the Model. 
 * The ``master`` branch contains the completed project. 
 
-## Benefits:
+## What is MVP?
+
+[Model-View-Presenter](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) is a user interface architectural pattern engineered to facilitate automated unit testing and improve the separation of concerns in presentation logic:
+
+* The **Model** is an interface defining the data to be displayed or otherwise acted upon in the user interface.
+* The **View** is a passive interface that displays data (the Model) and routes user commands (events) to the presenter to act upon that data.
+* The **Presenter** acts upon the model and the view. It retrieves data from repositories (the model), and formats it for display in the view.
+
+
+## Benefits
 
 * **Loose Coupling** - The Presenter is an intermediary between the View code and the Model. This allows the View and the Model to evolve independently of each other.
 * **[Separation of Concerns](http://en.wikipedia.org/wiki/Separation_of_concerns)** - Individual sections can be reused, as well as developed and updated independently. 
