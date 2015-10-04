@@ -1,24 +1,22 @@
 package io.jpotts18.android_mvp.domain.ui.activities;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.jpotts18.android_mvp.R;
 import io.jpotts18.android_mvp.domain.models.Repo;
+import io.jpotts18.android_mvp.domain.repos.IRepoListView;
 import io.jpotts18.android_mvp.domain.repos.RepoAdapter;
 import io.jpotts18.android_mvp.domain.repos.RepoListPresenter;
-import io.jpotts18.android_mvp.domain.repos.IRepoListView;
 import retrofit.RetrofitError;
 import retrofit.client.Response;
 
@@ -31,7 +29,7 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
      * TODO: What about Input Validations? Should the Views or the Models know how to validate themselves?
      */
 
-    @InjectView(R.id.repo_list_view)
+    @Bind(R.id.repo_list_view)
     ListView listView;
 
     private RepoListPresenter presenter;
@@ -40,7 +38,7 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repo_list);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         presenter = new RepoListPresenter(this);
         listView.setOnItemClickListener(this);
     }
