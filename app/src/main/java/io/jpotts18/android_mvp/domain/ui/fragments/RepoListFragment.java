@@ -12,7 +12,7 @@ import android.widget.Toast;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.Bind;
 import io.jpotts18.android_mvp.R;
 import io.jpotts18.android_mvp.domain.models.Repo;
 import io.jpotts18.android_mvp.domain.repos.IRepoListView;
@@ -25,7 +25,7 @@ public class RepoListFragment extends Fragment implements IRepoListView {
 
     public RepoListFragment() {}
 
-    @InjectView(R.id.fragment_repo_list_view)
+    @Bind(R.id.fragment_repo_list_view)
     ListView listView;
 
     private RepoListPresenter presenter;
@@ -39,7 +39,7 @@ public class RepoListFragment extends Fragment implements IRepoListView {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_repo_list, container, false);
-        ButterKnife.inject(this, view);
+        ButterKnife.bind(this, view);
         return view;
     }
 
