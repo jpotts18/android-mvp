@@ -11,8 +11,11 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.jpotts18.android_mvp.BuildConfig;
 import io.jpotts18.android_mvp.R;
+import io.jpotts18.android_mvp.domain.login.DaggerLoginPresenterComponent;
 import io.jpotts18.android_mvp.domain.login.ILoginView;
 import io.jpotts18.android_mvp.domain.login.LoginPresenter;
+import io.jpotts18.android_mvp.domain.login.LoginPresenterComponent;
+import io.jpotts18.android_mvp.domain.login.LoginPresenterModule;
 
 
 public class LoginActivity extends ActionBarActivity implements ILoginView {
@@ -42,8 +45,11 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
             passwordEditText.setText("$uper$ecret");
         }
 
+        LoginPresenterComponent component = DaggerLoginPresenterComponent.builder().
+                loginPresenterModule(new LoginPresenterModule(this)).build();
+
         // #1 Give your Presenter a reference to the View here
-        presenter = new LoginPresenter(this);
+        presenter = component.provideLoginPresenter();
     }
 
     @OnClick(R.id.login_submit_button)
