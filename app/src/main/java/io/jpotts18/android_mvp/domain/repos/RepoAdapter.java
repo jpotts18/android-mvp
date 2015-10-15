@@ -9,10 +9,9 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import io.jpotts18.android_mvp.domain.models.Repo;
-import io.jpotts18.android_mvp.domain.ui.RepoListActivity;
 
 /**
  * Created by jpotts18 on 5/12/15.
@@ -58,11 +57,11 @@ public class RepoAdapter extends BaseAdapter {
     }
 
     public static class ViewHolder {
-        @InjectView(android.R.id.text1)
+        @Bind(android.R.id.text1)
         TextView text1;
 
         public ViewHolder(View view) {
-            ButterKnife.inject(this, view);
+            ButterKnife.bind(this, view);
         }
     }
 }
