@@ -1,4 +1,12 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
 apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+
 
 android {
     compileSdkVersion 22
@@ -21,10 +29,19 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+
+
+    packagingOptions {
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+    }
+
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.0.0'
-    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.jakewharton:butterknife:7.0.1'
+    apt 'com.google.dagger:dagger-compiler:2.0.1' //needed for source code generation
+    compile 'com.google.dagger:dagger:2.0.1' //dagger itself
+    provided 'org.glassfish:javax.annotation:10.0-b28' //needed to resolve compilation errors, thanks to tutplus.org for finding the dependency
 }

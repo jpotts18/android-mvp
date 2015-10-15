@@ -15,9 +15,9 @@ public class LoginPresenter implements ILoginPresenter {
     private ILoginView view;
     private SynchronousLoginInteractor interactor;
 
-    public LoginPresenter(ILoginView loginView) {
+    public LoginPresenter(ILoginView loginView,SynchronousLoginInteractor synchronousLoginInteractor) {
         this.view = loginView;
-        this.interactor = new SynchronousLoginInteractor();
+        this.interactor = synchronousLoginInteractor;
     }
 
     public void attemptLogin(String username, String password){

@@ -1,21 +1,21 @@
 package io.jpotts18.android_mvp.domain.ui;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import butterknife.Bind;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import io.jpotts18.android_mvp.BuildConfig;
 import io.jpotts18.android_mvp.R;
+import io.jpotts18.android_mvp.domain.login.DaggerLoginPresenterComponent;
 import io.jpotts18.android_mvp.domain.login.ILoginView;
 import io.jpotts18.android_mvp.domain.login.LoginPresenter;
+import io.jpotts18.android_mvp.domain.login.LoginPresenterComponent;
+import io.jpotts18.android_mvp.domain.login.LoginPresenterModule;
 
 
 public class LoginActivity extends ActionBarActivity implements ILoginView {
@@ -26,10 +26,10 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     ********************************************************************************************
     */
 
-    @InjectView(R.id.login_email_edit_text)
+    @Bind(R.id.login_email_edit_text)
     EditText emailEditText;
 
-    @InjectView(R.id.login_password_edit_text)
+    @Bind(R.id.login_password_edit_text)
     EditText passwordEditText;
 
     LoginPresenter presenter;
@@ -38,15 +38,18 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         if (BuildConfig.DEBUG) {
             emailEditText.setText("anthing@gmail.com");
             passwordEditText.setText("$uper$ecret");
         }
 
+        LoginPresenterComponent component = DaggerLoginPresenterComponent.builder().
+                loginPresenterModule(new LoginPresenterModule(this)).build();
+
         // #1 Give your Presenter a reference to the View here
-        presenter = new LoginPresenter(this);
+        presenter = component.provideLoginPresenter();
     }
 
     @OnClick(R.id.login_submit_button)
