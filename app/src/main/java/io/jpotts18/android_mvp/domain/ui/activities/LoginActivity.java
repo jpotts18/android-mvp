@@ -9,7 +9,7 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.Bind;
 import butterknife.OnClick;
 import io.jpotts18.android_mvp.BuildConfig;
 import io.jpotts18.android_mvp.R;
@@ -26,10 +26,10 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     ********************************************************************************************
     */
 
-    @InjectView(R.id.login_github_username)
+    @Bind(R.id.login_github_username)
     EditText githubUsernameEditText;
 
-    @InjectView(R.id.login_fake_password)
+    @Bind(R.id.login_fake_password)
     EditText fakePasswordEditText;
 
     LoginPresenter presenter;
@@ -39,7 +39,7 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
 
         if (BuildConfig.DEBUG) {
             githubUsernameEditText.setText("jakewharton");

@@ -13,7 +13,7 @@ import java.util.Comparator;
 import java.util.List;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
+import butterknife.Bind;
 import io.jpotts18.android_mvp.R;
 import io.jpotts18.android_mvp.domain.models.Repo;
 import io.jpotts18.android_mvp.domain.repos.RepoAdapter;
@@ -31,7 +31,7 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
      * TODO: What about Input Validations? Should the Views or the Models know how to validate themselves?
      */
 
-    @InjectView(R.id.repo_list_view)
+    @Bind(R.id.repo_list_view)
     ListView listView;
 
     private RepoListPresenter presenter;
@@ -40,7 +40,7 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_repo_list);
-        ButterKnife.inject(this);
+        ButterKnife.bind(this);
         presenter = new RepoListPresenter(this);
         listView.setOnItemClickListener(this);
     }
