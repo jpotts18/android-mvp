@@ -4,7 +4,7 @@ This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/
 
 ## Videos
 
-[Intro to MVP and Synchronous Login](https://vimeo.com/128043372)
+![Intro to MVP and Synchronous Login](http://i.ytimg.com/vi/qE4DEwrK2N4/hqdefault.jpg)
 
 ## Getting Started
 
