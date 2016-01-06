@@ -4,7 +4,7 @@ This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/
 
 ## Videos
 
-![Intro to MVP and Synchronous Login](http://i.ytimg.com/vi/qE4DEwrK2N4/hqdefault.jpg)
+[Android MVP Playlist - Youtube](https://www.youtube.com/playlist?list=PLfbTKxZYb1mhQQaajZw0OntPcioSPdfKM)
 
 ## Getting Started
 
