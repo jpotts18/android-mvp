@@ -22,10 +22,7 @@
             android:name=".domain.ui.activities.RepoListActivity"
             android:label="@string/title_repo_list_activity" >
         </activity>
-        <activity
-            android:name=".domain.ui.activities.RepoListFragmentActivity"
-            android:label="@string/title_activity_repo_list_fragment" >
-        </activity>
+
     </application>
 
 </manifest>

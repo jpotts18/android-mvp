@@ -1,4 +1,4 @@
-package io.jpotts18.android_mvp.domain.ui;
+package io.jpotts18.android_mvp.domain.ui.activities;
 
 import android.app.ProgressDialog;
 import android.content.Intent;

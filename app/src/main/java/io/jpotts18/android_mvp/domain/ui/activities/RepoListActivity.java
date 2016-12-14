@@ -1,4 +1,4 @@
-package io.jpotts18.android_mvp.domain.ui;
+package io.jpotts18.android_mvp.domain.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
