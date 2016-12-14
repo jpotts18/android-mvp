@@ -1,7 +1,5 @@
 package io.jpotts18.android_mvp.domain.login.sync;
 
-import io.jpotts18.android_mvp.domain.login.sync.ISynchronousLoginInteractor;
-
 /**
  * Created by jpotts18 on 5/11/15.
  */
