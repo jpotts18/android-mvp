@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".domain.ui.activities.LoginActivity"
+            android:name=".domain.ui.LoginActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".domain.ui.activities.RepoListActivity"
+            android:name=".domain.ui.RepoListActivity"
             android:label="@string/title_repo_list_activity" >
         </activity>
 
