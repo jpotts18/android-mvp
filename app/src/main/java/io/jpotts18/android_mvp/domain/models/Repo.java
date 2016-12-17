@@ -9,6 +9,6 @@ public class Repo {
     public int id;
     public String name;
     public boolean fork;
-    @SerializedName("stargazers_count")
-    public int stars;
+    //    @SerializedName("stargazers_count")//uncommented for Retrofit2
+    public int stargazers_count;
 }

@@ -17,8 +17,9 @@ import io.jpotts18.android_mvp.domain.models.Repo;
 import io.jpotts18.android_mvp.domain.repos.IRepoListView;
 import io.jpotts18.android_mvp.domain.repos.RepoAdapter;
 import io.jpotts18.android_mvp.domain.repos.RepoListPresenter;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
+//import retrofit.RetrofitError;
+//import retrofit.client.Response;
+import retrofit2.Response;//New update to retrofit has renamed package to retrofit2
 
 public class RepoListActivity extends ActionBarActivity implements IRepoListView, AdapterView.OnItemClickListener {
 
@@ -58,8 +59,8 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
     }
 
     @Override
-    public void onReposLoadedFailure(RetrofitError error) {
-        Toast.makeText(this, error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+    public void onReposLoadedFailure(Throwable throwable) {//Retrofit2 has No RetrofitError
+        Toast.makeText(this, throwable.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
     }
 
     @Override

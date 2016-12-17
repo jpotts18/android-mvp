@@ -52,7 +52,7 @@ public class RepoAdapter extends BaseAdapter {
             view.setTag(holder);
         }
         Repo repo = (Repo) getItem(position);
-        holder.text1.setText(String.format("%s - %d", repo.name, repo.stars));
+        holder.text1.setText(String.format("%s - %d", repo.name, repo.stargazers_count));
         return view;
     }
 
