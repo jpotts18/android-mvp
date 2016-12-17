@@ -11,10 +11,10 @@ import io.jpotts18.android_mvp.R;
 
 public class LoginActivity extends ActionBarActivity {
 
-    @Bind(R.id.login_email_edit_text)
+    @Bind(R.id.login_github_username)
     EditText loginEditText;
 
-    @Bind(R.id.login_password_edit_text)
+    @Bind(R.id.login_fake_password)
     EditText passwordEditText;
 
     @Override
