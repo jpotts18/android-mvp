@@ -17,8 +17,9 @@ import io.jpotts18.android_mvp.domain.models.Repo;
 import io.jpotts18.android_mvp.domain.repos.IRepoListView;
 import io.jpotts18.android_mvp.domain.repos.RepoAdapter;
 import io.jpotts18.android_mvp.domain.repos.RepoListPresenter;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
+import retrofit2.Response;
+//import retrofit.RetrofitError;
+//import retrofit.client.Response;
 
 public class RepoListFragment extends Fragment implements IRepoListView {
 
@@ -54,7 +55,7 @@ public class RepoListFragment extends Fragment implements IRepoListView {
     }
 
     @Override
-    public void onReposLoadedFailure(RetrofitError error) {
-        Toast.makeText(getActivity(), error.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+    public void onReposLoadedFailure(Throwable throwable) {
+        Toast.makeText(getActivity(), throwable.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
     }
 }
