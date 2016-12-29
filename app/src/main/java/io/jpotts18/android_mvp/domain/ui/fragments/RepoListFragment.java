@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.R;
 import io.jpotts18.android_mvp.domain.models.Repo;
@@ -25,7 +25,7 @@ public class RepoListFragment extends Fragment implements IRepoListView {
 
     public RepoListFragment() {}
 
-    @Bind(R.id.fragment_repo_list_view)
+    @BindView(R.id.fragment_repo_list_view)
     ListView listView;
 
     private RepoListPresenter presenter;
