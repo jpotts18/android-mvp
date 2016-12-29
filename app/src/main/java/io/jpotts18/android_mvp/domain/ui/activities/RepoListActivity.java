@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.R;
 import io.jpotts18.android_mvp.domain.models.Repo;
@@ -30,7 +30,7 @@ public class RepoListActivity extends ActionBarActivity implements IRepoListView
      * TODO: What about Input Validations? Should the Views or the Models know how to validate themselves?
      */
 
-    @Bind(R.id.repo_list_view)
+    @BindView(R.id.repo_list_view)
     ListView listView;
 
     private RepoListPresenter presenter;

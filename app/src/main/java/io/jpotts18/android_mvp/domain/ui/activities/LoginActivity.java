@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.jpotts18.android_mvp.BuildConfig;
@@ -26,10 +26,10 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
     ********************************************************************************************
     */
 
-    @Bind(R.id.login_github_username)
+    @BindView(R.id.login_github_username)
     EditText githubUsernameEditText;
 
-    @Bind(R.id.login_fake_password)
+    @BindView(R.id.login_fake_password)
     EditText fakePasswordEditText;
 
     LoginPresenter presenter;

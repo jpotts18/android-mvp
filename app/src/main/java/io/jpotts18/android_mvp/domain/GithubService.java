@@ -6,7 +6,9 @@ import io.jpotts18.android_mvp.domain.models.Repo;
 //import retrofit.Callback;
 //import retrofit.http.GET;
 //import retrofit.http.Path;
+import io.reactivex.Observable;
 import retrofit2.Call;
+import retrofit2.Response;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
@@ -16,5 +18,5 @@ import retrofit2.http.Path;
 
 public interface GithubService {
     @GET("/users/{user}/repos")
-    Call<List<Repo>> listRepos(@Path("user") String user);
+    Observable<Response<List<Repo>>> listRepos(@Path("user") String user);
 }

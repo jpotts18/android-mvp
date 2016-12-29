@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.domain.models.Repo;
 
@@ -57,7 +57,7 @@ public class RepoAdapter extends BaseAdapter {
     }
 
     public static class ViewHolder {
-        @Bind(android.R.id.text1)
+        @BindView(android.R.id.text1)
         TextView text1;
 
         public ViewHolder(View view) {
