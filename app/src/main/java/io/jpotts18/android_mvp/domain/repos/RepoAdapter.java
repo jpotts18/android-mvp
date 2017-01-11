@@ -9,7 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
-import butterknife.Bind;
+import butterknife.BindView;
 import butterknife.ButterKnife;
 import io.jpotts18.android_mvp.domain.models.Repo;
 
@@ -52,12 +52,12 @@ public class RepoAdapter extends BaseAdapter {
             view.setTag(holder);
         }
         Repo repo = (Repo) getItem(position);
-        holder.text1.setText(String.format("%s - %d", repo.name, repo.stars));
+        holder.text1.setText(String.format("%s - %d", repo.name, repo.stargazers_count));
         return view;
     }
 
     public static class ViewHolder {
-        @Bind(android.R.id.text1)
+        @BindView(android.R.id.text1)
         TextView text1;
 
         public ViewHolder(View view) {
