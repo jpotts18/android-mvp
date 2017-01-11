@@ -1,6 +1,6 @@
 # Android MVP
 
-This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) architecture and was inspired by [Antonio Leiva's Android MVP](https://github.com/antoniolg/androidmvp)
+This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) architecture and was inspired by [Antonio Leiva's Android MVP](https://github.com/antoniolg/androidmvp). You can find an example with updated libraries in the `master-2` branch from [RajuSe](https://github.com/RajuSE).
 
 ## Videos
 
@@ -11,6 +11,7 @@ This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/
 1. Clone the Repo - ``git clone git@github.com:jpotts18/android-mvp.git``
 1. Look at all of the branches - ``git branch -a``
 2. **Read about the branches**
+1. Don't forget to checkout the `master-2` it has updated libraries like RxJava, Butterknife, etc.
 
 This repository contains a **chain of branches** that shows the logical progression of the Android MVP. 
 
