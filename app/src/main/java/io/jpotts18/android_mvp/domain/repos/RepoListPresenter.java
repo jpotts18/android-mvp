@@ -3,8 +3,7 @@ package io.jpotts18.android_mvp.domain.repos;
 import java.util.List;
 
 import io.jpotts18.android_mvp.domain.models.Repo;
-import retrofit.RetrofitError;
-import retrofit.client.Response;
+import retrofit2.Response;
 
 /**
  * Created by jpotts18 on 5/11/15.
@@ -30,7 +29,7 @@ public class RepoListPresenter implements IRepoListPresenter, OnRepoInteractorFi
     }
 
     @Override
-    public void onNetworkFailure(RetrofitError error) {
-        view.onReposLoadedFailure(error);
+    public void onNetworkFailure(Throwable throwable) {
+        view.onReposLoadedFailure(throwable);
     }
 }

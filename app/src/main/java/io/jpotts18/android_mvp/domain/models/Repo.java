@@ -1,6 +1,6 @@
 package io.jpotts18.android_mvp.domain.models;
 
-import com.google.gson.annotations.SerializedName;
+//import com.google.gson.annotations.SerializedName;
 
 /**
  * Created by jpotts18 on 5/12/15.
@@ -9,6 +9,6 @@ public class Repo {
     public int id;
     public String name;
     public boolean fork;
-    @SerializedName("stargazers_count")
-    public int stars;
+//    @SerializedName("stargazers_count")//uncommented for Retrofit2
+    public int stargazers_count;
 }
