@@ -12,6 +12,7 @@ This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/
 1. Look at all of the branches - ``git branch -a``
 2. **Read about the branches**
 1. Don't forget to checkout the `master-2` it has updated libraries like RxJava, Butterknife, etc.
+2. [Code walkthrough diagram](https://github.com/jpotts18/android-mvp/wiki/Diagramatic-representation) might help you understanding flow better.
 
 This repository contains a **chain of branches** that shows the logical progression of the Android MVP. 
 
