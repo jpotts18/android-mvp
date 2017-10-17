@@ -27,7 +27,9 @@ proguard/
 *.log
 # Intellij
 *.iml
- .idea/tasks.xml
+app/app.iml
+.idea
+.idea/tasks.xml
 .idea/gradle.xml
 .idea/dictionaries
 .idea/libraries
