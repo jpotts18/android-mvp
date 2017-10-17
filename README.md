@@ -72,3 +72,10 @@ MVC Pattern
 [Separation of Concerns - Wikipedia](http://en.wikipedia.org/wiki/Separation_of_concerns)
 
 [Jeff Portter repo](https://github.com/jpotts18/android-mvp)
+
+#### Notes
+Clean your project from all those file listed in gitignore. 
+ git rm -r --cached . 
+ git add .
+ git commit -m 'Removed all files that are in the .gitignore' 
+ git push origin master
