@@ -3,11 +3,13 @@ package io.jpotts18.android_mvp.domain.loggin;
 
 
 
+import io.jpotts18.android_mvp.domain.Config;
 import io.jpotts18.android_mvp.domain.PipeDriveService;
 
 import io.jpotts18.android_mvp.domain.models.User;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 import retrofit2.Response;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -28,7 +30,7 @@ public class LoginInteractor {
 
     private Retrofit initRetrofit() {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("https://api.github.com")
+                .baseUrl(Config.BASE_URL)
 //                .setEndpoint("https://api.github.com")
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -59,6 +61,16 @@ public class LoginInteractor {
         mCompositeDisposable.add(pipeDriveService.listRepos(username, password)
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
-                .subscribe(this::handleResponse, this::handleError));
+                .subscribe(new Consumer<Response<User>>() {
+                    @Override
+                    public void accept(Response<User> userResponse) throws Exception {
+                        handleResponse(userResponse);
+                    }
+                }, new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        handleError(throwable);
+                    }
+                }));
     }
 }

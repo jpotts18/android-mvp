@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
-
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion 25
@@ -27,6 +27,7 @@ android {
 
 }
 
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -39,10 +40,17 @@ dependencies {
     compile 'com.jakewharton:butterknife:8.8.1'
     compile 'com.squareup.okhttp3:okhttp:3.9.0'
 
-    compile 'com.squareup.retrofit2:retrofit:2.3.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.3.0'
 
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
 
+    compile 'io.reactivex.rxjava2:rxjava:2.0.1'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    //compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
-    compile 'io.reactivex.rxjava2:rxandroid:2.2.0'
+    compile 'com.orhanobut:logger:2.1.1'
+
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    apt 'com.jakewharton:butterknife-compiler:8.8.1'
+
  }
