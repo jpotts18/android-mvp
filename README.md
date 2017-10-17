@@ -1,6 +1,22 @@
-# Android MVP - PipeDrive test
+# Basic Android MVP - PipeDrive test assignment
 
-This repository demonstrates the [Model View Presenter](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter) architecture and was inspired by [Antonio Leiva's Android MVP](https://github.com/antoniolg/androidmvp). You can find an example with updated libraries in the [master-2](https://github.com/jpotts18/android-mvp/tree/master-2) branch from [RajuSe](https://github.com/RajuSE).
+This sample project is inspired in the initial project of [master-2](https://github.com/jpotts18/android-mvp)
+which i used as  starting point for my vision of a simple MVP. 
+
+Much of the reasoning behind the current structure is aimed at organizing the code in a way that it's easy to read for others, most of the time some my fellow programmers write code meant to be for them and for them only. 
+
+Enforcing desing patterns like a true fanatic may lead to more problems thant solutions  i belive that one should take the best of the features and the benefits of them and make adjustments thinking about the team.  Having something that every one can understand, extend and maintain is the way to go.
+
+In contrast part of me is always an advocate of rules and guidelines in order to comunicate ideas and speak the same language with others for example i find this blueprint a fascinating idea to organize out project following
+MVP + Clean Arquitecture. 
+
+ [todo-mvp-clean](https://github.com/googlesamples/android-architecture/tree/todo-mvp-clean/)
+
+But the work should stop there  i also find this the next step the check list and it's to combine MVP + JavaRx 
+in the following repo there is some good example involing the whole toolbox mixing reactive programming, dependency injenction, test driven development and more. 
+ This repository is also inspired the samples found in [todo-mvp-rxjava](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava/)  
+
+
 
 ## Videos
 
