@@ -1,4 +1,4 @@
-package io.jpotts18.android_mvp.domain.repos;
+package io.jpotts18.android_mvp.domain.loggin.ui;
 
 import android.app.Activity;
 import android.content.Context;

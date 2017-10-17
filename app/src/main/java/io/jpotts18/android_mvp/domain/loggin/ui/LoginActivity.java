@@ -1,23 +1,23 @@
-package io.jpotts18.android_mvp.domain.ui.activities;
+package io.jpotts18.android_mvp.domain.loggin.ui;
 
 import android.app.ProgressDialog;
-import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 import io.jpotts18.android_mvp.BuildConfig;
 import io.jpotts18.android_mvp.R;
-import io.jpotts18.android_mvp.domain.login.ILoginView;
-import io.jpotts18.android_mvp.domain.login.LoginPresenter;
+import io.jpotts18.android_mvp.domain.BaseActivity;
+import io.jpotts18.android_mvp.domain.loggin.LoginContract;
+import io.jpotts18.android_mvp.domain.loggin.LoginListPresenter;
 
 
-public class LoginActivity extends ActionBarActivity implements ILoginView {
+public class LoginActivity extends BaseActivity implements LoginContract.View {
 
     /******************************************************************************************
      - LoginActivity ONLY knows how to display views and sending events and data to the presenter
@@ -25,14 +25,14 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
      - The only changes to the LoginActivity to allow for asynchronous behavior was to add a ProgressDialog
     ********************************************************************************************
     */
-
-    @BindView(R.id.login_github_username)
+    static final String TAG = LoginActivity.class.getName();
+    @BindView(R.id.login_pipedrive_username)
     EditText githubUsernameEditText;
 
-    @BindView(R.id.login_fake_password)
+    @BindView(R.id.login_pipedrive_password)
     EditText fakePasswordEditText;
 
-    LoginPresenter presenter;
+    LoginListPresenter presenter;
     ProgressDialog progressDialog;
 
     @Override
@@ -40,13 +40,14 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         ButterKnife.bind(this);
+        initLogger(TAG);
 
         if (BuildConfig.DEBUG) {
-            githubUsernameEditText.setText("jakewharton");
-            fakePasswordEditText.setText("$uper$ecret");
+            githubUsernameEditText.setText("dreamcodesoft@gmail.com");
+            fakePasswordEditText.setText("Blaster1311");
         }
 
-        presenter = new LoginPresenter(this);
+        presenter = new LoginListPresenter(this);
     }
 
     @OnClick(R.id.login_submit_button)
@@ -55,24 +56,32 @@ public class LoginActivity extends ActionBarActivity implements ILoginView {
         String email =  githubUsernameEditText.getText().toString();
         String password = fakePasswordEditText.getText().toString();
         // Pass user event straight to presenter
-        presenter.attemptLogin(email, password);
+        presenter.authenticateUser(email, password);
+        //Logger.d("loginTapped");
     }
 
     @Override
-    public void navigateToListActivity() {
+    public void showLoadingIndicator(boolean active) {
+        progressDialog = ProgressDialog.show(this, "Loading...", null);
+    }
+
+    @Override
+    public void showLoginError(Throwable throwable) {
+        progressDialog.dismiss();
+        Toast.makeText(this, throwable.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+        //Logger.d("loginTapped");
+    }
+
+    @Override
+    public void navigateToPersonListActivity() {
         progressDialog.dismiss();
         Toast.makeText(this, "Login Success!",Toast.LENGTH_SHORT).show();
         // TODO: This seems to have to do with persisting data. Where should we move this?
-        Intent i = new Intent(this, RepoListFragmentActivity.class);
-        i.putExtra("username", githubUsernameEditText.getText().toString());
-        startActivity(i);
+        //Intent i = new Intent(this, RepoListFragmentActivity.class);
+       // i.putExtra("username", githubUsernameEditText.getText().toString());
+       // startActivity(i);
     }
 
-    @Override
-    public void loginFailed() {
-        progressDialog.dismiss();
-        Toast.makeText(this, "Login Invalid: Must be 3 letters or longer", Toast.LENGTH_SHORT).show();
-    }
 }
 
 

@@ -4,15 +4,14 @@ buildscript {
     repositories {
         jcenter()
         mavenCentral()
-
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.2.2'
-        classpath 'com.jakewharton:butterknife-gradle-plugin:8.4.0'
-
-
+        classpath 'com.android.tools.build:gradle:2.3.3'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        // Better IDE support for annotations (so Android Studio interacts better with Dagger)
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+
     }
 }
 
@@ -20,6 +19,18 @@ allprojects {
     repositories {
         jcenter()
         mavenCentral()
+  }
+}
 
+allprojects {
+    afterEvaluate {
+        tasks.withType(JavaCompile.class) {
+            options.compilerArgs << "-Xmaxerrs" << "500"
+        }
     }
 }
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
