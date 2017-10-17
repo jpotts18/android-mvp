@@ -1,41 +1,46 @@
 # Basic Android MVP - PipeDrive test assignment
 
+## Intro
+
 This sample project is inspired in the initial project of [master-2](https://github.com/jpotts18/android-mvp)
 which i used as  starting point for my vision of a simple MVP. 
 
-Much of the reasoning behind the current structure is aimed at organizing the code in a way that it's easy to read for others, most of the time some my fellow programmers write code meant to be for them and for them only. 
+Much of the reasoning behind the current structure is aimed at organizing the code in a way that it's easy to read for others, most of the time some of my fellow programmers wrote code meant to be for them and for them only which is in my oppinion and negative aspect in team but not so important  if it's only you behind the source code as long as you can come back later and be able to understand what was your reasoning when you wrote this line or the other. 
 
-Enforcing desing patterns like a true fanatic may lead to more problems thant solutions  i belive that one should take the best of the features and the benefits of them and make adjustments thinking about the team.  Having something that every one can understand, extend and maintain is the way to go.
+Enforcing desing patterns like a true fanatic may lead to more problems thant solutions  i belive that one should take the best of the features and the benefits patterns can offer and the procceed to make adjustments in a team friendly way.  Having something that every one can understand, extend and maintain is the way to go makes it easier for feature delivery, team rotation and eventually getting your product out there.
 
-In contrast part of me is always an advocate of rules and guidelines in order to comunicate ideas and speak the same language with others for example i find this blueprint a fascinating idea to organize out project following
-MVP + Clean Arquitecture. 
+## Inspiration
+Part of me always believed  that guidelines are necesseary in order to comunicate ideas or give people some context,  what better starting point than open source- projects  my ideal modern app lies in between an MVP+Clean arquitecture  plus  MVP + Reactive programming(JavaRx2) :
 
  [todo-mvp-clean](https://github.com/googlesamples/android-architecture/tree/todo-mvp-clean/)
 
-But the work should stop there  i also find this the next step the check list and it's to combine MVP + JavaRx 
-in the following repo there is some good example involing the whole toolbox mixing reactive programming, dependency injenction, test driven development and more. 
- This repository is also inspired the samples found in [todo-mvp-rxjava](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava/)  
+
+I find everythign about JavaRx scary and confusing but i understand the value it brings at binding components inside applications so that's i include rxjava in my list. 
+ [todo-mvp-rxjava](https://github.com/googlesamples/android-architecture/tree/todo-mvp-rxjava/)  
 
 
 
 ## Videos
 
-[Android MVP Playlist - Youtube](https://www.youtube.com/playlist?list=PLfbTKxZYb1mhQQaajZw0OntPcioSPdfKM)
+[Android MVP Playlist - by JeffPortter (https://github.com/jpotts18) ](https://www.youtube.com/playlist?list=PLfbTKxZYb1mhQQaajZw0OntPcioSPdfKM)
+[RxJava common mistakes - Dan Lew](https://www.youtube.com/watch?v=QdmkXL7XikQ)
 
 ## Getting Started
 
-1. Clone the Repo - ``git clone git@github.com:jpotts18/android-mvp.git``
-1. Look at all of the branches - ``git branch -a``
-2. **Read about the branches**
-1. Don't forget to checkout the `master-2` it has updated libraries like RxJava, Butterknife, etc.
+1. Clone the Repo - ``git clone git@github.com:dante8300/android-mvp.git``
+2. Look at all of the branches - ``git branch -a``
+3. dev is the basic branch  showing a sample MVP approach involving a logging operation. 
+4. dev-db-rx the next iteration involving persitance and current rx implementation. 
+  
+
 
 This repository contains a **chain of branches** that shows the logical progression of the Android MVP. 
 
-* ``git checkout 1-login-view`` - demonstates a simple View which is a LoginActivity
-* ``git checkout 2-synchronous-login-mvp`` - demonstrates Login MVP implementation with a synchronous Model (or interactor).
-* ``git checkout 3-async-login-mvp`` - demonstrates Login MVP with an asynchronous Model which does not change any code in the LoginActivity
-* ``git checkout 4-list-activity-view`` - demonstates a more complex View (RepoListActivity) and an Asynchronous Networked Model which shows a users Github repositories sorted by stars.
-* ``git checkout 5-list-fragment`` - substitutes the RepoListActivity for a Fragment without changing any code in the Model. 
+* ``git checkout dev`` - Shows a simple logging activity following a simple MVP pattern using a basic JavaRx approach and endpoint comunication. 
+* ``git checkout dev-db-rx`` - Is the next iteration involving persitance and a basic model for the logging activity.  
+* ``git checkout dev-db-rx-2`` - Aside from the logging includes an extra usecase involving comunication with and additional endpoint. 
+* ``git checkout dev-db-rx-2-td`` - MVP is not only good for organizing code and separation of concerns while desinging and app it also makes it easier to test. 
+
 * The ``master`` branch contains the completed project. 
 
 ## What is MVP?
@@ -72,3 +77,5 @@ MVC Pattern
 [Model-View-Presenter - Wikipedia](http://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93presenter)
 
 [Separation of Concerns - Wikipedia](http://en.wikipedia.org/wiki/Separation_of_concerns)
+
+[Jeff Portter repo](https://github.com/jpotts18/android-mvp)
